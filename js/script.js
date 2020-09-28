@@ -1,4 +1,27 @@
 $(document).ready(function () {
+    function scrolled() {
+        var scroll = $(this).scrollTop();
+        $('.header-menu__link').each(function () {
+            var attr = $(this).attr('href');
+            var position = $(attr).offset().top - 191;
+        })
+    }
+    $(window).on('scroll', function () {
+        scrolled();
+    });
+    $('.header-menu__link').click(function (e) {
+        e.preventDefault();
+       
+        $('html').animate({
+            scrollTop: $($(this).attr('href')).offset().top - $('.navbar').innerHeight()
+        }, 800)
+    })
+    $('.header-menu-brand__link').click(function (e) {
+        e.preventDefault();
+        $('html').animate({
+            scrollTop: $($(this).attr('href')).offset().top - $('.navbar').innerHeight()
+        }, 800)
+    })
     $('.ask').click(function (e) {
         $('.fa-plus').attr('style', '');
         if (!$(this).next().hasClass('open')) {
@@ -15,42 +38,39 @@ $(document).ready(function () {
         }
     })
 
-    document.querySelector('.left').onclick = left;
-    document.querySelector('.right').onclick = right;
-    var inner = document.querySelector('.carousel-inner');
-    var move = 0;
+
+    var btn = document.querySelector('.btn-toup');
     var timer;
-    autoplay();
+    btn.addEventListener('click', toTop);
 
-    function autoplay() {
-        timer = setTimeout(left, 3000);
+    function toTop() {
+        scrolled = window.pageYOffset;
+        if (scrolled > 0) {
+            scrolled -= 50;
+            scrollTo(0, scrolled);
+            timer = setTimeout(toTop, 10)
+        }
     }
 
-    function left() {
-        move -= 300;
-        if (move < -1200) {
-            move = 0;
+    window.addEventListener('scroll', function (e) {
+        if (pageYOffset > 600) {
+            btn.style.display = 'block';
+        } else {
+            btn.style.display = 'none';
         }
-        inner.style.left = move + 'px';
-        clearTimeout(timer);
-        autoplay();
+    });
+    var text = document.querySelector('.header-left__title');
+    var str = text.innerHTML;
+    text.innerHTML = '';
+    var count = 0;
+
+    function print() {
+        text.innerHTML += str.charAt(count);
+        count++;
+        if (str.length >= count) {
+            clearInterval(timer);
+        }
     }
-    function right() {
-        if (move == 0) {
-            move = -1200;
-        }
-        else {
-            move += 300;
-        }
-        inner.style.left = move + 'px';
-        clearTimeout(timer);
-        autoplay();
-    }
+    setInterval(print, 50);
 
 })
-
-
-
-
-
-

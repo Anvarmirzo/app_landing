@@ -15,10 +15,10 @@
 
 <body>
   <!--############################## HEADER START ##############################-->
-  <header class="header">
+  <header class="header" id="header">
     <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center">
       <div class="container">
-        <a href="" class="header-menu-brand__link navbar-brand">App<span class="header-menu-brand__span">Lab</span></a>
+        <a href="#header" class="header-menu-brand__link navbar-brand">App<span class="header-menu-brand__span">Lab</span></a>
         </li>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
           aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,11 +26,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="header-menu navbar-nav mt-2 mt-lg-0 ml-auto">
-            <li class="nav-item header-menu__item"><a href="" class="nav-link header-menu__link">Home</a></li>
-            <li class="nav-item header-menu__item"><a href="" class="nav-link header-menu__link">Key Features</a></li>
-            <li class="nav-item header-menu__item"><a href="" class="nav-link header-menu__link">Pricing</a></li>
-            <li class="nav-item header-menu__item"><a href="" class="nav-link header-menu__link">Testiminial</a></li>
-            <li class="nav-item header-menu__item"><a href="" class="nav-link header-menu__link">FAQ</a></li>
+            <li class="nav-item header-menu__item"><a href="#header" class="nav-link header-menu__link">Home</a></li>
+            <li class="nav-item header-menu__item"><a href="#features" class="nav-link header-menu__link">Key Features</a></li>
+            <li class="nav-item header-menu__item"><a href="#price" class="nav-link header-menu__link">Pricing</a></li>
+            <li class="nav-item header-menu__item"><a href="#test" class="nav-link header-menu__link">Testiminial</a></li>
+            <li class="nav-item header-menu__item"><a href="#faq" class="nav-link header-menu__link">FAQ</a></li>
             <li class="nav-item header-menu__item header-menu__button"><a href=""
                 class="nav-item header-menu__link header-menu__button_link">Try for free</a></li>
           </ul>
@@ -92,7 +92,7 @@
 
 
   <!--############################## AWESOME START ##############################-->
-  <section class="awesome">
+  <section class="awesome" id="features">
     <div class="container awesome__container">
       <div class="awesome-content">
         <div class="row d-flex justify-content-between align-items-center">
@@ -327,7 +327,7 @@
 
 
   <!--############################## PRICE START ##############################-->
-  <section class="price">
+  <section class="price" id="price">
     <div class="text choose-text">
       <div class="container choose__container">
         <div class="row d-flex">
@@ -400,7 +400,7 @@
 
 
   <!--############################## MEET START ##############################-->
-  <section class="meet">
+  <section class="meet" id="test">
     <div class="container meet__container">
       <div class="row">
         <div class="meet-left col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12"><img src="img/people_icons.png" alt=""
@@ -424,8 +424,8 @@
             domination. At the end of the day, going forward, a new normal that has evolved from generation
             X is on the runway heading towards a streamlined cloud solution. User generated content in
             real-time will have multiple touchpoints for offshoring.</p>
-          <div class="meet-author d-flex align-items-center justify-content-between w-100">
-            <div class="meet-author__left d-flex align-items-center authorcarousel-inner">
+          <div class="meet-author d-flex align-items-center justify-content-between">
+            <div class="meet-author__left d-flex align-items-center">
               <img src="img/man_icon.png" alt="" class="meet-author__img">
               <ul class="meet-author__info">
                 <li class="">
@@ -436,10 +436,10 @@
                 </li>
               </ul>
             </div>
-            <div class="meet-author__right d-flex align-items-center justify-content-between arrows">
-              <button class="meet-author__btn left"><i class="fa fa-arrow-circle-o-left"></i></button>
+            <div class="meet-author__right d-flex align-items-center justify-content-between">
+              <button class="meet-author__btn"><i class="fa fa-arrow-circle-o-left"></i></button>
               <div class="meet-author__line"></div>
-              <button class="meet-author__btn right"><i class="fa fa-arrow-circle-o-right"></i></button>
+              <button class="meet-author__btn"><i class="fa fa-arrow-circle-o-right"></i></button>
             </div>
           </div>
         </div>
@@ -451,7 +451,7 @@
 
 
   <!--############################## FREQUENTLY START ##############################-->
-  <section class="frequently">
+  <section class="frequently" id="faq">
     <div class="text">
       <div class="container frequently__container">
         <div class="row">
@@ -587,7 +587,8 @@
     </div>
   </footer>
   <!--############################## FOOTER END ##############################-->
-
+  <button class="btn-toup"><i class="click-up fa fa-angle-up"></i></button>
+  
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.js"></script>

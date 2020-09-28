@@ -38,6 +38,13 @@ a:hover {
 
 /* ############################## HEADER START ############################## */
 
+.navbar {
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  z-index: 122;
+}
+
 .header {
   background: url("../img/header-bg.jpg");
   background-repeat: no-repeat;
@@ -775,6 +782,26 @@ a:hover {
 }
 
 /* ############################## FOOTER END ############################## */
+
+.btn-toup {
+  font-size: 30px;
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  color: #fff;
+  background: #2500f9;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: none;
+  border: none;
+  outline: none !important;
+}
+
+.click-up {
+  margin-bottom: 4px;
+  display: block;
+}
 
 @media (max-width: 1199.98px) {
   .header-nav__container {
