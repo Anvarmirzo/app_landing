@@ -52,6 +52,10 @@ a:hover {
   background-size: cover;
 }
 
+.header__container {
+  padding-top: 50px;
+}
+
 .header-nav__container {
   padding: 93px 0 25px;
 }
@@ -881,6 +885,14 @@ a:hover {
     padding: 0 20px 0 0;
   }
 
+  .meet-author__icon_margin {
+    margin-left: 337px;
+  }
+
+  .meet-author__line {
+    left: 87.5%;
+  }
+
   .download-left__img_margin {
     margin-bottom: 80px;
   }
@@ -1000,6 +1012,14 @@ a:hover {
 
   .meet-left__img {
     margin-top: 270px;
+  }
+
+  .meet-author__icon_color {
+    display: none;
+  }
+
+  .meet-author__line {
+    display: none;
   }
 }
 
